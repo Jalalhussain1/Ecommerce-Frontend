@@ -1,11 +1,18 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 
 
 function App() {
 
 
   return (
-   <>
-   <div className='text-4xl'>jalal</div></>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route></Route>
+        </Routes>
+
+      </BrowserRouter>
+    </>
   )
 }
 
