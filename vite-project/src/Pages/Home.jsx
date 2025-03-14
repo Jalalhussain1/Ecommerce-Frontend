@@ -6,6 +6,8 @@ import CategorySection from '../Components/CategorySection'
 import { setProducts } from '../redux/ProductSlice'
 import { useSelector, useDispatch } from 'react-redux'
 import ProductCart from '../Components/ProductCart'
+import Shop from './Shop'
+
 
 const Home = () => {
   const dispatch = useDispatch()
@@ -14,6 +16,7 @@ const Home = () => {
     dispatch(setProducts(mockData))
   }, []);
   return (
+    <div>
     <div className='bg-white mt-2 px-4 md:px-16 lg:px-24'>
       <div className='container mx-auto py-4 flex flex-col md:flex-row space-x-2'>
         <div className='w-full md:w-3/12'>
@@ -40,19 +43,19 @@ const Home = () => {
       </div>
       <InfoSection />
       <CategorySection />
-
-     <div className='container mx-auto py-12'>
-      <h2 className='text-2xl font-bold mb-6 text-center '>Top Product</h2>
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 cursor-pointer'>
-        {products.products.slice(0,5).map(((product) => 
-        <ProductCart product={product} />
-        ))}
+      <div className='container mx-auto py-12'>
+        <h2 className='text-2xl font-bold mb-6 text-center '>Top Product</h2>
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 cursor-pointer'>
+          {products.products.slice(0, 5).map(((product) =>
+            <ProductCart product={product} />
+          ))}
+        </div>
       </div>
-     </div>
-
-
+     
+     
     </div>
-
+ <Shop />
+ </div>
   )
 }
 

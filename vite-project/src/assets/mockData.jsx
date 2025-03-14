@@ -7,6 +7,7 @@ import image6 from '../assets/images/image6.png'
 import image7 from '../assets/images/image7.png'
 import image8 from '../assets/images/image8.png'
 import image9 from '../assets/images/image9.png'
+import image10 from '../assets/images/image10.png'
 
 export const Categories = [
     "Electronics",
@@ -79,6 +80,13 @@ export const mockData = [
         image: image1,
         name: "product 9",
         price: 10.99,
+
+    },
+    {
+        id: 10,
+        image: image10,
+        name: "product 10",
+        price: 44.99,
 
     },
 ]
